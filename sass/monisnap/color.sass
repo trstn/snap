@@ -1,0 +1,58 @@
+/* Colors */
+
+$white: #ffffff
+$black: #000000
+$grey: #ECEFF1
+
+$light: #f0f1ff
+$blue: #305189
+$green: #00d1b2
+$purple: #796ef9
+$yellow: #ffb31a
+$red: #d9534f
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span,
+a
+	&.is-primary-color
+		color: $blue
+	&.is-secondary-color
+		color: $purple
+	&.is-third-color
+		color: $yellow
+	&.is-fourth-color
+		color: $green
+
+body,
+header,
+footer,
+div,
+section,
+article
+	&.is-primary-color
+		background: $blue
+	&.is-secondary-color
+		background: $purple
+	&.is-third-color
+		background: $yellow
+	&.is-light-color
+		background: $light
+	&.is-primary-gradient
+		background: $purple
+		background: -moz-linear-gradient(-45deg, rgba(139,79,249,1) 0%, rgba(121,110,249,1) 58%)
+		background: -webkit-linear-gradient(-45deg, rgba(139,79,249,1) 0%,rgba(121,110,249,1) 58%) 
+		background: linear-gradient(135deg, rgba(139,79,249,1) 0%,rgba(121,110,249,1) 58%)
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8b4ff9', endColorstr='#796ef9',GradientType=1 )
+	&.is-third-gradient
+		background: $yellow
+		background: rgb(255,207,112); 
+		background: -moz-linear-gradient(-45deg, rgba(255,207,112,1) 0%, rgba(255,179,26,1) 57%); 
+		background: -webkit-linear-gradient(-45deg, rgba(255,207,112,1) 0%,rgba(255,179,26,1) 57%);
+		background: linear-gradient(135deg, rgba(255,207,112,1) 0%,rgba(255,179,26,1) 57%);
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffcf70', endColorstr='#ffb31a',GradientType=1 ); 

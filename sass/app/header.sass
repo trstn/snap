@@ -1,0 +1,44 @@
+#header
+	position: fixed
+	width: 100vw
+	top: 0
+	z-index: 10
+	h1
+		position: absolute
+		left: 40px
+		top: 40px
+		z-index: 10
+	nav
+		position: absolute
+		right: 40px
+		top: 55px
+		text-align: right
+		ul
+			li
+				margin: 0 5px
+				display: inline-block
+
+#burger
+	position: fixed
+	top: 60px
+	right: 40px
+	z-index: 10
+	height: 30px
+	width: 40px
+	span
+		width: 40px
+		height: 4px
+		background: white
+		position: absolute
+		left: 0
+		&:nth-child(1)
+			top: 0
+		&:nth-child(2)
+			top: 13px
+		&:nth-child(3)
+			top: 26px
+
+	+mobile
+		top: 40px
+
+	

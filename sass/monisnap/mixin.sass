@@ -1,0 +1,29 @@
+/* Mixins */
+
+=border-gradient($from, $to, $weight: 0)  
+  $mix-main: mix($from, $to)
+  $mix-sub-from: mix($mix-main, $from)
+  $mix-sub-to: mix($mix-main, $to)
+  box-shadow: 0 1px 0 $weight rgba($mix-sub-to, .25),0 -1px 0 $weight rgba($mix-sub-from, .25),1px 0 0 $weight rgba($mix-sub-to, .25),-1px 0 0 $weight  rgba($mix-sub-from, .25), 1px -1px 0 $weight rgba($mix-main, .5), -1px 1px 0 $weight rgba($mix-main, .5),1px 1px 0 $weight rgba($to, .75), -1px -1px 0 $weight rgba($from, .75)
+
+=horizontal-gradient($from, $to, $stop: 100% )
+  background-color: $from
+  background-image: -moz-linear-gradient(left, $from 0%, $to $stop)
+  background-image: -webkit-gradient(linear, left top, right top, color-stop(0%, $from), color-stop($stop, $to))
+  background-image: -webkit-linear-gradient(left, $from 0%, $to $stop)
+  background-image: -o-linear-gradient(left, $from 0%, $to $stop)
+  background: -ms-linear-gradient(left, $from 0%, $to $stop)
+  background: linear-gradient(to right, $from 0%, $to $stop)
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$from', endColorstr='$to',GradientType=1 )
+
+=transition($property: all, $duration: .3s, $ease: linear)
+	-webkit-transition: $property $duration $ease
+	-moz-transition: $property $duration $ease
+	-o-transition: $property $duration $ease
+	transition: $property $duration $ease
+
+=selection($color, $background)
+  ::-moz-selection
+    color: $color !important;  background: $background !important
+  ::selection
+    color: $color !important;  background: $background !important 

@@ -1,0 +1,51 @@
+/* Buttons */
+
+.button
+	&.is-full
+		width: 100%
+	&.is-yellow
+		background-color: $yellow
+		color: $white
+		border: 0
+		+transition(background, .3s, $easeOutExpo)
+		&:hover
+			background: $green
+
+	&.is-purple
+		background-color: $purple
+		color: $white
+		border: 0
+		+transition(background, .3s, $easeOutExpo)
+		&:hover
+			background: $yellow
+
+
+	&.is-border-gradient
+		+border-gradient($yellow, $purple, .5px)
+		background-color: transparent
+		border: 0
+		color: $black
+		+transition(box-shadow, .3s, $easeOutExpo)
+		&:hover
+			+border-gradient($purple, $green, .5px)
+
+	&.is-border-white
+		border-color: $white
+		color: $white
+		background-color: transparent
+		&:hover, 
+			+transition(all, .3s, $easeOutExpo)
+			color: $purple
+			background-color: $white
+		&.is-active
+			+transition(all, .3s, $easeOutExpo)
+			color: $purple
+			background-color: $white
+			&:hover
+				color: $white
+				border-color: $purple
+				background-color: $purple
+
+
+
+
